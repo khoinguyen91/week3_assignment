@@ -57,3 +57,7 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
+group :development do
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem 'guard-rspec'
+end

@@ -13,7 +13,7 @@ class Event < ActiveRecord::Base
   end
 
   def self.search(query)
-    where("name ILIKE ?", "%#{query}%").where('published = ?', true)
+    where("name ILIKE ?", "%#{query}%").where("ends_at > ? AND published = ?", DateTime.now, true)
   end
   private
 
