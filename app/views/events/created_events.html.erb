@@ -1,0 +1,33 @@
+<p><div class="container-fluid events-list my-events">
+  <% if @events.count > 0 %>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Event name</th>
+          <th>Ticket Type</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @events.each do |event| %>
+            <tr>
+              <td><%= event.name %></td>
+              <td><%= event.ticket_types.count %></td>
+              <td><%= link_to 'Add Ticket', new_ticket_type_path(event_id:  event.id) %></td>
+              <% if event.published %>
+                <td><%= link_to 'Hide', publish_event_path(id: event.id) %></td>
+              <% else %>
+                <td><%= link_to 'Publish', publish_event_path(id:  event.id) %></td>
+              <% end %>
+              <td>Edit</td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+  <% else %>
+    <p> You did not create any event </p>
+  <% end %>
+</div></p>

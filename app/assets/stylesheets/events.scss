@@ -1,7 +1,12 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+p {
+    padding-bottom: 0px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-top: 0px;
+}
 .events-header {
   padding-top: 80px;
   padding-bottom: 80px;

@@ -2,7 +2,7 @@
   <div class="row no-pad">
     <div class="col-md-3 sidebar">
       <p>
-        <%= fa_icon 'ticket' %>
+        <%=  'ticket' %>
         Price
       </p>
       <h1> Hot Events </h1>
@@ -20,7 +20,7 @@
           <div class="clearfix"></div>
         <% end %>
         <%= link_to new_event_ticket_path(@event) do %>
-          <button class='btn btn-lg btn-block btn-danger'> BOOK NOW </button>
+          <button class='btn btn-lg btn-block btn-primary'> BOOK NOW </button>
         <% end %>
       </div>
     </div>
@@ -29,16 +29,16 @@
       <div class="container">
         <h3> <%= @event.name %> </h3>
         <div class="pull-left">
-          <%= fa_icon 'clock-o' %>
+          <%=  'clock-o' %>
         </div>
         <div class="time-details"> 
-          <%= @event.starts_at.strftime('%A, %d %b %Y %l:%M %p') %> 
+          <%= @event.starts_at.strftime('%A, %d %b %Y %l:%M %p %Z') %> 
         </div>
 
         
 
         <div class="pull-left">
-          <%= fa_icon 'map-marker' %>
+          <%=  'map-marker' %>
         </div>
         <div class="venue-details">
          <%= @event.venue.name %>
