@@ -1,9 +1,5 @@
-<div class="container-fluid no-pad events-detail">
-  <div class="row no-pad">
-    <div class="col-md-3 sidebar">
-      <p>
-        book your tickets here
-      </p>
+        Book your tickets here
+
       <div class="ticket-list">
         <%= form_for(Order.new, url: book_path, html: {class: "book-form"})  do |f| %>
         <div class="form-group">
@@ -67,9 +63,6 @@
         </div>
 
       </div>
-    </div>
-  </div>
-</div>
 
 <script>
   $('.book-btn').click(function() {

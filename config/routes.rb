@@ -9,8 +9,12 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create]
   resources :users
+  match 'auth/:provider/callback', to: 'sessions#login_fb', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  get 'auth/:provider/callback' => 'sessions#callback'
   delete 'logout' => 'sessions#destroy'
   get 'login' => 'sessions#new'
+  get 'sign_up' => 'users#new'
   get 'sign_out' => 'sessions#destroy'
   get 'created_events' => 'events#created_events'
   get 'publish_event' => 'events#publish'
@@ -18,6 +22,7 @@ Rails.application.routes.draw do
   get 'ticket_types' => 'tickets#new_ticket_type'
   post 'create_ticket' => 'tickets#create'
   post 'book' => 'orders#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

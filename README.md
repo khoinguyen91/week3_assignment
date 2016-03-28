@@ -1,10 +1,10 @@
-# Homework 3 - *Name of App*
+# Homework 3 - *CoderTicket*
 
 **Name of your app** is a Ruby on Rails blog application that allows users to create and buy tickets to cool events. 
 
-Submitted by: **Your Name Here**
+Submitted by: **KhoiNguyen**
 
-Time spent: **X** hours
+Time spent: **20** hours
 
 URL: **Insert your Heroku URL here**
 
@@ -14,7 +14,7 @@ SimpleCov Test Coverage: **Insert percentage or link to report here**
 
 The following **required** functionality is complete:
 
-* [ ] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
+* [x] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
 
 #### Events
 
@@ -57,6 +57,13 @@ The following **required** functionality is complete:
 
 Describe any challenges encountered while building the app.
 
+## Video Walkthrough 
+
+Here's a walkthrough of implemented user stories:
+
+![Video Walkthrough](demo.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## License
 
     Copyright [yyyy] [name of copyright owner]
