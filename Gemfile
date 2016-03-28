@@ -66,3 +66,4 @@ source 'https://rails-assets.org' do
 end
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
+gem 'simplecov', :require => false, :group => :test
